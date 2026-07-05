@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Priya ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff4d6d,#ff85a2,#ffb3c6,#ffc2d1);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+color:white;
+box-shadow:0 0 25px rgba(255,255,255,.4);
+z-index:2;
+animation:pop 1.5s;
+}
+
+@keyframes pop{
+from{transform:scale(.6);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h1{
+font-size:55px;
+color:#fff;
+text-shadow:0 0 15px gold;
+animation:glow 2s infinite;
+}
+
+@keyframes glow{
+50%{text-shadow:0 0 30px yellow;}
+}
+
+h2{
+margin:15px 0;
+font-size:34px;
+color:#fff7b2;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+margin-top:15px;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff3366;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.balloon,.heart{
+position:absolute;
+bottom:-100px;
+animation:float linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>Priya ❤️</h2>
+
+<p>
+Dear Priya,<br><br>
+
+Today is all about celebrating the wonderful person you are.
+May your smile never fade, your dreams always come true,
+and your heart always stay full of happiness.
+</p>
+
+<p>
+💖 You are Special.<br>
+🌸 You are Beautiful.<br>
+✨ You deserve every happiness in the world.
+</p>
+
+<p style="color:yellow;font-weight:bold;">
+Wishing you endless smiles, success, good health,
+and a life filled with love and beautiful memories.
+</p>
+
+<button onclick="wish()">🎁 Open Your Surprise</button>
+
+</div>
+
+<script>
+
+function wish(){
+alert("🎉 Happy Birthday Priya ❤️\n\nMay all your dreams come true!\nStay Happy, Stay Blessed! 🌸");
+}
+
+const emojis=["🎈","🎈","💖","❤️","🎉","✨","🌸"];
+
+for(let i=0;i<60;i++){
+
+let e=document.createElement("div");
+
+e.className=Math.random()>0.5?"balloon":"heart";
+
+e.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+e.style.left=Math.random()*100+"%";
+
+e.style.fontSize=(20+Math.random()*30)+"px";
+
+e.style.animationDuration=(5+Math.random()*8)+"s";
+
+e.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(e);
+
+}
+
+</script>
+
+</body>
+</html>
